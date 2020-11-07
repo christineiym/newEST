@@ -1,0 +1,91 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-gap: 5px;
+    grid-row: span;
+}
+
+.image {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.main {
+    grid-column-start: 3;
+    grid-column-end: 6;
+    background: darkslategray;
+}
+
+img.original {
+    max-height: auto;
+    max-width: auto;
+}
+
+img.smaller {
+    size: contain;
+}
+
+html {
+    font-family: "Helvetica", sans-serif;
+}
+
+h1 {
+    background: purple;
+    background-attachment: fixed;
+    color: white;
+    text-align: left;
+    column-span: all;
+    width: 100%;
+    font-family: Impact;
+    padding: 5%;
+}
+
+h2 {
+    background: darkslategrey;
+    background-attachment: fixed;
+    color: white;
+    text-align: left;
+    column-span: all;
+    width: 100%;
+    font-family: sans-serif;
+    font-size: 16px;
+    padding: 1%;
+}
+
+li a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+li a:hover, a:active {
+    background-color: blue;
+    color: white;
+  }
+
+
+li p {
+    color: black;
+    text-align: left;
+    border: medium solid white;
+    border-radius: 5px;
+    background-color: darkslategrey;
+}
+
+div {
+    padding: 1%;
+    margin: auto;
+}
+
+body {
+    background: black url("images/wood.jpg");
+    color: white;
+    image-rendering: auto;
+    padding: 0%;
+    font-family: sans-serif;
+    font-size: 18px;
+    column-span: all;
+}
