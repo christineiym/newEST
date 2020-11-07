@@ -1,0 +1,32 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'newEST/style.css' %}">
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>newEST Homepage</title>
+  </head>
+  <body>
+    <h1>newEST</h1>
+    <h2><i>Bringing you the newEST in Entertainment, Sports, and Technology.</i></h2>
+    
+    <!-- Creating a grid to ensure proper sizing and placement of elements. -->
+    <div class="grid-container">
+      {% for headline, url, source, author, date, time, description, image in mylist %}
+      <div class="image"><img class="smaller" src="{{image}}" alt="" width="300" height="300"></div>
+      <div class="main">
+        <h3><a href="{{url}}">{{headline}}</a></h3>
+        By {{author}}, {{source}}; published {{date}} at {{time}}
+        {{value | linebreaks}}
+    
+        {{description}}
+        {{value | linebreaks}}
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>
+
