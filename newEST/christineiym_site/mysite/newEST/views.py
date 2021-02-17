@@ -10,7 +10,7 @@ import os
 
 DATE_FORMAT_LENGTH: int = 10
 TIME_FORMAT_LENGTH: int = 8
-SECRET_KEY_NEWSAPI = os.getenv('SECRET_KEY_NEWSAPI', 'Optional default value')
+SECRET_KEY_NEWSAPI = os.environ['SECRET_KEY_NEWSAPI']
 
 def index(request):
     """Displays all news articles related to entertainment, sports, or tech."""
