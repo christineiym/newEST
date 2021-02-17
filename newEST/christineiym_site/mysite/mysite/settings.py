@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import os
 import django_heroku
 from pathlib import Path
 
@@ -21,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '5m1ks%qg_&i5oila3@v(fp+hngd*w^%_4@yi%b4d5_q%jp)@(2'
+SECRET_KEY = os.getenv('SECRET_KEY_DJANGO', 'Optional default value')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
