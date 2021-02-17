@@ -18,7 +18,7 @@ def index(request):
     import json
 
     # Initialize API KEY
-    newsapi = NewsApiClient(api_key='SECRET_KEY_NEWSAPI')
+    newsapi = NewsApiClient(api_key=SECRET_KEY_NEWSAPI)
     entertainment_articles = newsapi.get_top_headlines(category='entertainment')
     sports_articles = newsapi.get_top_headlines(category='sports')
     technology_articles = newsapi.get_top_headlines(category='technology')
