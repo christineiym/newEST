@@ -5,10 +5,12 @@ from django.views import generic
 from django.utils import timezone
 from typing import List
 from django.template import loader
+import os
 
 
 DATE_FORMAT_LENGTH: int = 10
 TIME_FORMAT_LENGTH: int = 8
+SECRET_KEY_NEWSAPI = os.getenv('SECRET_KEY_NEWSAPI', 'Optional default value')
 
 def index(request):
     """Displays all news articles related to entertainment, sports, or tech."""
@@ -16,7 +18,7 @@ def index(request):
     import json
 
     # Initialize API KEY
-    newsapi = NewsApiClient(api_key='78b9d599c4f94f8fa3afb1a5458928d6')
+    newsapi = NewsApiClient(api_key='SECRET_KEY_NEWSAPI')
     entertainment_articles = newsapi.get_top_headlines(category='entertainment')
     sports_articles = newsapi.get_top_headlines(category='sports')
     technology_articles = newsapi.get_top_headlines(category='technology')
